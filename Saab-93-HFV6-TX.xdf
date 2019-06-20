@@ -1,4 +1,4 @@
-<!-- Written 06/20/2019 12:35:27 -->
+<!-- Written 06/20/2019 14:41:01 -->
 <XDFFORMAT version="1.60">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -9,6 +9,7 @@
     <CATEGORY index="0x0" name="Fueling" />
     <CATEGORY index="0x1" name="Ignition" />
     <CATEGORY index="0x2" name="Limiters" />
+    <CATEGORY index="0x3" name="MAF" />
   </XDFHEADER>
   <XDFCONSTANT uniqueid="0x3C47">
     <title>KRKATE</title>
@@ -197,6 +198,44 @@
       <max>1.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="X*0.007813">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x3DE0" flags="0x30">
+    <title>KFKHFM</title>
+    <CATEGORYMEM index="0" category="4" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x1C3972" mmedelementsizebits="16" mmedcolcount="14" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>14</indexcount>
+      <decimalpl>3</decimalpl>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>6</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*.25">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x1C398E" mmedelementsizebits="8" mmedcolcount="14" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>14</indexcount>
+      <embedinfo type="1" />
+      <datatype>23</datatype>
+      <unittype>67</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*.75">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x1C399C" mmedelementsizebits="8" mmedrowcount="14" mmedcolcount="14" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>5</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*.007813">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
